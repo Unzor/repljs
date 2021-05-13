@@ -3,7 +3,7 @@ REPLjs is a JavaScript tool to execute code in virtual machines (Based on JSJava
 
 # API
 Example code:
-```
+```JavaScript
 var repljs=new REPLjs();
 repljs.setLanguage('python3');
 repljs.setFileName('main.py');
