@@ -13,3 +13,4 @@ console.log(a);
 }
 repljs.run();
 ```
+This code will run Python 3, and it will print "Hello World! :)" in the console.
