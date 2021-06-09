@@ -35,20 +35,20 @@ console.log(a);
   </textarea>
   <button id="run">Run Code</button>
     <p> Output </p>
-    <div id="output"></div>
+    <div id="playground_output" style="background: black; color: white;"></div>
     <p> Console Output </p>
-    <div id="console_output"></div>
+    <div id="console_output" style="background: black; color: white;"></div>
     <script>
       console.log=function(inp){
-     var newElm=document.createElement('code');
+    var newElm=document.createElement('code');
         newElm.innerText=inp;
-        document.getElementById("console_output").appendChild(newElm);
+        document.getElementById("playground_output").appendChild(newElm);
       }
       
             console.logRes=function(inp){
      var newElm=document.createElement('code');
         newElm.innerText=inp;
-        document.getElementById("output").appendChild(newElm);
+        document.getElementById("console_output").appendChild(newElm);
       }
       
             console.error=function(inp){
