@@ -6,6 +6,8 @@ You can install REPLjs by downloading the ```repljs.min.js``` file, or you can g
 ```html
 <script src="https://cdn.jsdelivr.net/gh/Unzor/repljs/repljs.min.js" type="text/javascript"></script>
 ```
+
+Include the script at the beginning of the ```<body>``` tag.
 # API
 Example code:
 ```JavaScript
