@@ -7,11 +7,9 @@ Example code:
 var repljs=new REPLjs();
 repljs.setLanguage('python3');
 repljs.setFileName('main.py');
-repljs.setCode("print('Hello World! :)')");
-repljs.onCallback=function(a){
+repljs.runCode("print('Hello World! :)')", function(a){
 console.log(a);
-}
-repljs.run();
+});
 ```
 This code will run Python 3, and it will print "Hello World! :)" in the console.
 
