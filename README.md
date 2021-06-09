@@ -1,6 +1,11 @@
 # repljs
 REPLjs is a JavaScript tool to execute code in virtual machines (Based on JSJava).
 
+# Installation
+You can install REPLjs by downloading the ```repljs.min.js``` file, or you can get it from jsdelivr:
+```html
+<script src="https://cdn.jsdelivr.net/gh/Unzor/repljs/repljs.min.js" type="text/javascript"></script>
+```
 # API
 Example code:
 ```JavaScript
