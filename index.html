@@ -14,18 +14,20 @@
     API Example:
   </p>
   <code>
-    var repljs=new REPLjs();<div></div>
-repljs.setLanguage('python3');<div></div>
-repljs.setFileName('main.py');<div></div>
-<div></div>
-repljs.runCode("print('Hello World! :)')", function(a){<div></div>
+    <code style="color: blue;">var</code> repljs = <code style="color: blue;">new</code> REPLjs();<div></div>
+    repljs.setLanguage(<code style="color: brown;">'python3'</code>);<div></div>
+    repljs.setFileName(<code style="color: brown;">'main.py'</code>);<div></div>
+<div>
+     ‏‏‎ 
+    </div>
+    repljs.runCode(<code style="color: brown;">"print('Hello World! :)')"</code>,  <code style="color: blue;">function</code>(a){<div></div>
 console.log(a);<div></div>
     });<div></div>
   </code>
   <h1>
     Playground
   </h1>
-  <p> Tip: you don't need to add a <code> var repljs = new REPLjs()</code>! </p>
+  <p> Tip: you don't need to add a   <code> <code style="color: blue;">var</code> repljs = <code style="color: blue;">new</code> REPLjs()! </code></p>
 <textarea id="code_playground" style="margin: 0px; width: 511px; height: 270px;">repljs.setLanguage('python3');
 repljs.setFileName('main.py');
 
@@ -58,6 +60,7 @@ console.log(a);
       }
       
       document.getElementById('run').onclick=function(){
+        location.href="#console_output";
                 document.getElementById("output").innerHTML="";
                         document.getElementById("console_output").innerHTML="";
         
