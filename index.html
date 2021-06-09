@@ -1,6 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/gh/Unzor/repljs/repljs.min.js" type="text/javascript"></script>
 <p>
   Get REPLjs from here:
 </p>
 <code>
 &lt;script src="https://cdn.jsdelivr.net/gh/Unzor/repljs/repljs.min.js" type="text/javascript"&gt;&lt;/script&gt;
 </code>
+  <p>
+    API Example:
+  </p>
+  <code>
+    var repljs=new REPLjs();<div></div>
+repljs.setLanguage('python3');<div></div>
+repljs.setFileName('main.py');<div></div>
+<div></div>
+repljs.runCode("print('Hello World! :)')", function(a){<div></div>
+console.log(a);<div></div>
+    });<div></div>
+  </code>
+  <h1>
+    Playground
+  </h1>
+  <p> Tip: you don't need to add a <code> var repljs = new REPLjs()</code>! </p>
+<textarea id="code_playground" style="margin: 0px; width: 511px; height: 270px;">repljs.setLanguage('python3');
+repljs.setFileName('main.py');
+
+repljs.runCode("print('Hello World! :)')", function(a){
+console.log(a);
+});
+  </textarea>
+  <button id="run">Run Code</button>
+    <p> Output </p>
+    <div id="output"></div>
+    <p> Console Output </p>
+    <div id="console_output"></div>
+    <script>
+      console.log=function(inp){
+     var newElm=document.createElement('code');
+        newElm.innerText=inp;
+        document.getElementById("console_output").appendChild(newElm);
+      }
+      
+            console.logRes=function(inp){
+     var newElm=document.createElement('code');
+        newElm.innerText=inp;
+        document.getElementById("output").appendChild(newElm);
+      }
+      
+            console.error=function(inp){
+     var newElm=document.createElement('code');
+        newElm.innerText=inp;
+        document.getElementById("console_output").appendChild(newElm);
+      }
+      
+      document.getElementById('run').onclick=function(){
+                document.getElementById("output").innerHTML="";
+                        document.getElementById("console_output").innerHTML="";
+        
+      var newScript=document.createElement('script');
+        newScript.innerText=`var repljs = new REPLjs();
+        ` + document.getElementById('code_playground').value;
+        
+        if (!document.getElementById('code_playground').value.includes('repljs')){
+        console.error('No REPLjs found in playground!');
+        } else {
+        document.body.appendChild(newScript);
+        }
+      }
+    </script>
+</body>
+</html>
